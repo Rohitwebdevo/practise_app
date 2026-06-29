@@ -35,6 +35,27 @@ const AllPage = () => {
             </div>
             <span className="card-cta">Go to API Search →</span>
           </Link>
+
+           <Link to="/hocsample1" className="dashboard-card">
+            <div>
+              <h2>HOC sample1</h2>
+            </div>
+            <span className="card-cta">Go to HOC sample →</span>
+          </Link>
+
+          <Link to="/redux" className="dashboard-card">
+            <div>
+              <h2>Redux Counter</h2>
+            </div>
+            <span className="card-cta">Go to Redux →</span>
+          </Link>
+
+          <Link to="/callback" className="dashboard-card">
+            <div>
+              <h2>Callback</h2>
+            </div>
+            <span className="card-cta">Go to Callback →</span>
+          </Link>
         </div>
       </div>
     </div>

@@ -1,12 +1,17 @@
-import React from 'react'
+import React from "react";
 
-const MainHOC = ({component}) => {
+const MainHOC = (WrappedComponent) => {
+  const ProtectedComp = (props) => {
+    const isLogin = props.isLogin ?? props.login;
 
-  return (
-    <div>
-      
-    </div>
-  )
-}
+    if (!isLogin) {
+      return <p>Please login again</p>;
+    }
 
-export default MainHOC
+    return <WrappedComponent {...props} />;
+  };
+
+  return ProtectedComp;
+};
+
+export default MainHOC;
